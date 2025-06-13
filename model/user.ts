@@ -20,3 +20,6 @@ const userSchema = new Schema<IUser> (
         password : {type:String ,required : true}             // Require : true means manadatory field
     }
 );
+
+const User =  models?.user || model<IUser>("User" , userSchema) 
+export default User
